@@ -99,3 +99,19 @@
 # is_raining = False
 # if not is_raining:
 #     print("Let's go for a walk!")
+
+
+
+#for loop
+#starting point
+#condition
+#increment or decrement
+#database of people
+
+names=["Hubert", "Kate", "Leo", "Killian"]
+print(names[0])
+print(names[1])
+print(names[2])
+
+for name in names:
+    print(name)
