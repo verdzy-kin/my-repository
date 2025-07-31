@@ -108,10 +108,110 @@
 #increment or decrement
 #database of people
 
-names=["Hubert", "Kate", "Leo", "Killian"]
-print(names[0])
-print(names[1])
-print(names[2])
+names=["Hubert", "Kate", "Leo mbom", "Killian"]
+# print(names[0])
+# print(names[1])
+# print(names[2])
 
-for name in names:
-    print(name)
+count = 1
+for name in names:    
+    print(f"{count}. {name}")
+    count += 1
+
+#range function
+# range(stop) - starts from 0
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
+
+# range(start, stop)
+for i in range(2, 7):
+    print(i)  # 2, 3, 4, 5, 6
+
+# range(start, stop, step)
+for i in range(0, 10, 2):
+    print(i)  # 0, 2, 4, 6, 8
+
+# Countdown
+for i in range(10, 0, -1):
+    print(f"Countdown: {i}")
+print("Blast off! 🚀")
+
+
+# Basic while loop
+count = 1
+while count <= 5:
+    print(f"Count is: {count}")
+    count += 1  # Same as count = count + 1
+
+# User input loop
+user_input = ""
+while user_input != "quit":
+    user_input = input("Enter 'quit' to exit: ")
+    if user_input != "quit":
+        print(f"You entered: {user_input}")
+
+print("Goodbye!")
+
+# Break - exit the loop completely
+print("Finding the first even number:")
+for number in range(1, 10):
+    if number % 2 == 0:
+        print(f"Found even number: {number}")
+        break
+    print(f"{number} is odd")
+
+# Continue - skip to next iteration
+print("\nPrinting only odd numbers:")
+for number in range(1, 10):
+    if number % 2 == 0:
+        continue  # Skip even numbers
+    print(f"Odd number: {number}")
+
+# Number guessing game simulation
+import random
+
+target = random.randint(1, 10)
+guess = 0
+attempts = 0
+
+print("I'm thinking of a number between 1 and 10...")
+while guess != target and attempts < 3:
+    guess = random.randint(1, 10)  # Simulating user guess
+    attempts += 1
+
+    if guess == target:
+        print(f"Correct! The number was {target}")
+        print(f"It took {attempts} attempts")
+    elif guess < target:
+        print(f"Guess {guess} is too low")
+    else:
+        print(f"Guess {guess} is too high")
+
+if guess != target:
+    print(f"Sorry! The number was {target}")
+
+# Enumerate - get both index and value
+fruits = ["apple", "banana", "cherry"]
+for index, fruit in enumerate(fruits):
+    print(f"{index + 1}. {fruit}")
+
+# Zip - loop through multiple lists together
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+cities = ["New York", "London", "Tokyo"]
+
+for name, age, city in zip(names, ages, cities):
+    print(f"{name} is {age} years old and lives in {city}")
+
+# List comprehension - create lists with loops
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # [1, 4, 9, 16, 25]
+
+even_squares = [x**2 for x in range(1, 11) if x % 2 == 0]
+print(even_squares)  # [4, 16, 36, 64, 100]
+
+print("Triangle pattern]")
+for row in range(1,6):
+    for star in range(row):
+        print("*", end="")
+    print()
