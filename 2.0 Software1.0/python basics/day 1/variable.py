@@ -20,7 +20,7 @@
 
 # A ban name generator: IT collects your name, agae, favourite meal, school, department,bestfriend and generates a story based on the data collected
 
-name=input("Che Hubert")
+name=input("Delsy Kinyuy")
 age=input("21")
 fav_meal=input("a meal")
 school=input("coltech")
